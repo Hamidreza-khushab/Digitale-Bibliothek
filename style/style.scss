@@ -1,0 +1,137 @@
+$maincolor1 : #4B6587;
+$maincolor2 : #C8C6C6;
+$maincolor3 : #F7F6F2;
+$maincolor4 : #F0E5CF;
+$mainhover :  #99acc6;
+
+@mixin dialogSeting($top)
+{
+    width:50%;
+    height: 50%;
+    background-color:$maincolor3;
+    position: absolute;
+    top: $top; 
+    border: 4px transparent solid;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+@mixin dialogExitseting($top)
+{
+    position: relative;
+    top: $top;
+    left: 97%;
+    font-weight: lighter;
+    width: 4vmin;
+    height: 4vmin;
+    font-size: 2vmin;
+    border-radius: 50%;
+    background-color: red;
+}
+@mixin dialogheaderseting()
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $maincolor1;
+    cursor:move;
+    h3
+    {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: $maincolor3;
+    }
+}
+
+body
+    {
+        font-family: 'Oswald', sans-serif;
+        box-sizing: border-box;  
+        background-color: $maincolor4; 
+    }
+header
+    {
+        background-color:#C8C6C6;
+        padding: 2vmin;
+        width: 100%;
+        nav
+        {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+        }
+        nav .logo img
+        {
+            width: 10vmin;
+            height: 10vmin;
+            border-radius: 50%;
+        }
+        nav ul
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        nav ul li
+        {  
+            list-style: none;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover
+        {
+            background-color: $mainhover;
+            color: $maincolor1;
+        }
+    }
+main
+    {
+        height: 78vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .btnaddbook
+        {
+            padding: 5px;
+            background-color: $mainhover;
+        }
+        .addbook dialog
+        {
+            @include dialogSeting(38%)
+        }
+        .addbook dialog #resizable
+        {
+            background-color: $maincolor4;
+            width: 10px;
+            height: 10px;
+            cursor: se-resize;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .addbook dialog .close button
+        {
+            @include dialogExitseting(-10px)
+        }
+        .addbook dialog .headeraddbook
+        {
+            @include dialogheaderseting()
+        }
+
+    }
+footer
+    {
+        background-color:#C8C6C6;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+    }

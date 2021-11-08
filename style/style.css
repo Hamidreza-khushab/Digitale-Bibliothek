@@ -1,0 +1,105 @@
+body {
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  background-color: #F0E5CF;
+}
+
+header {
+  background-color: #C8C6C6;
+  padding: 2vmin;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+header nav .logo img {
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+header nav ul li a:hover {
+  background-color: #99acc6;
+  color: #4B6587;
+}
+
+main {
+  height: 78vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .btnaddbook {
+  padding: 5px;
+  background-color: #99acc6;
+}
+main .addbook dialog {
+  width: 50%;
+  height: 50%;
+  background-color: #F7F6F2;
+  position: absolute;
+  top: 38%;
+  border: 4px transparent solid;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+main .addbook dialog #resizable {
+  background-color: #F0E5CF;
+  width: 10px;
+  height: 10px;
+  cursor: se-resize;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+main .addbook dialog .close button {
+  position: relative;
+  top: -10px;
+  left: 97%;
+  font-weight: lighter;
+  width: 4vmin;
+  height: 4vmin;
+  font-size: 2vmin;
+  border-radius: 50%;
+  background-color: red;
+}
+main .addbook dialog .headeraddbook {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4B6587;
+  cursor: move;
+}
+main .addbook dialog .headeraddbook h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #F7F6F2;
+}
+
+footer {
+  background-color: #C8C6C6;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
